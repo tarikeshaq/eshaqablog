@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export  class MainPageContainer extends Component {
+export  class BlogsContainer extends Component {
   render() {
     return (
       <div>
