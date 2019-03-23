@@ -2,7 +2,7 @@ import * as React from 'react';
 import { MainPageContainer } from '../components/MainPageContainer';
 import { Toolbar } from '../components/Toolbar';
 import { Footer } from '../components/Footer';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
 export default class MainPage extends React.Component {
 
      constructor(props) {
@@ -10,10 +10,13 @@ export default class MainPage extends React.Component {
     }
 
      render() {
-        return (<div>
-            <Toolbar />
-            <MainPageContainer />
-            <Footer />
-        </div>);
+        return (
+
+            <div>
+                
+                <Toolbar />
+                <MainPageContainer />
+                <Footer />
+            </div>);
     }
 }

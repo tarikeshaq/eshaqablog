@@ -12,8 +12,11 @@
   "author": "Tarik Eshaq",
   "license": "ISC",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "bootstrap": "^4.3.1",
     "next": "^8.0.3",
     "react": "^16.8.4",
+    "react-bootstrap": "^1.0.0-beta.6",
     "react-dom": "^16.8.4"
   }
 }
