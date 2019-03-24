@@ -13,10 +13,9 @@ export class Header extends Component {
                     Tarik Eshaq
                 </a>
             </Link>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Link href="/blogs" className='nav-link'>
+                    <Link href="/blogs" >
                         <a className="nav-link">Blogs</a>
                     </Link>
                     <Link href="/portfolio">
