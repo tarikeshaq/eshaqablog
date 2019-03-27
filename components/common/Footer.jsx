@@ -47,20 +47,20 @@ export class Footer extends Component {
                     </Row>
                     <Row>
                         <Col>
-                            <FontAwesomeIcon onClick={() => {window.open("https://www.linkedin.com/in/tarikeshaq/", '__blank')}} icon={ faLinkedin } />
+                            <FontAwesomeIcon className="icon" onClick={() => {window.open("https://www.linkedin.com/in/tarikeshaq/", '__blank')}} icon={ faLinkedin } />
                         </Col>
                         <Col>
-                            <FontAwesomeIcon onClick={() => {window.open("https://github.com/tarikeshaq", '__blank')}} icon = { faGithub } />
+                            <FontAwesomeIcon className="icon" onClick={() => {window.open("https://github.com/tarikeshaq", '__blank')}} icon = { faGithub } />
                         </Col>
                         <Col>
-                            <FontAwesomeIcon onClick={() => {window.open("https://www.goodreads.com/user/show/77719569-tarik", '__blank')}} icon = { faGoodreads } />
+                            <FontAwesomeIcon className="icon" onClick={() => {window.open("https://www.goodreads.com/user/show/77719569-tarik", '__blank')}} icon = { faGoodreads } />
                         </Col>
                         <Col>
-                            <FontAwesomeIcon onClick={() => {this.sendMail();}}icon = { faEnvelope } />
+                            <FontAwesomeIcon className="icon" onClick={() => {this.sendMail();}}icon = { faEnvelope } />
                         </Col>
                         <Col>
                             <Container>
-                                <FontAwesomeIcon icon = { faCopyright } />
+                                <FontAwesomeIcon  icon = { faCopyright } />
                                 <span className="copyright">Tarik Eshaq 2019</span>
                             </Container>
                         </Col>
