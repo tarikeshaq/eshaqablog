@@ -1,28 +1,16 @@
 import React, { Component } from 'react'
-import { fakeFetch } from '../../api/fakeFetch';
 import Thumbnail from './Thumbnail';
 import Col from 'react-bootstrap/Col' 
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
+import '../../public/styles/bodyContainer.css';
 
 export  class BlogsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ...props,
-      posts: []
+      ...props
     }
-  }
-
-  componentDidMount() {
-    fakeFetch("posts").then(response => {
-      this.setState((state) => {
-        return {
-          ...state,
-          posts: [...response.posts]
-        };
-      })
-    });
   }
 
   render() {
@@ -40,7 +28,7 @@ export  class BlogsContainer extends Component {
     let i = 0;
     for (; i < thumbnailsToRender.length; i++) {
       if (i % 3 === 0 && i !== 0) {
-        rowedThumbnails.push(<Row className="mt-2" key={i}>
+        rowedThumbnails.push(<Row className="mt-2 mb-2" key={i}>
           {tempThumbnails}
         </Row>);
         tempThumbnails = [];
@@ -48,12 +36,12 @@ export  class BlogsContainer extends Component {
       tempThumbnails.push(thumbnailsToRender[i]);
     }
     if (tempThumbnails.length) {
-      rowedThumbnails.push(<Row className="mt-2" key={i}>
+      rowedThumbnails.push(<Row className="mt-2 mb-2" key={i}>
         {tempThumbnails}
       </Row>)
     }
     return (
-      <Container>
+      <Container className="bodyContainer">
         {rowedThumbnails}
       </Container>
     )
