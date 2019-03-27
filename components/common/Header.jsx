@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Link from 'next/link';
-import styled from 'styled-components';
 
-export class Header extends Component {
+
+export default class Header extends Component {
   render() {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">

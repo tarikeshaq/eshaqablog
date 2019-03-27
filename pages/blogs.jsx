@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BlogsContainer } from '../components/blogs/BlogsContainer';
-import { Header } from '../components/common/Header';
-import { Footer } from '../components/common/Footer';
+import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
 import { fakeFetch } from '../api/fakeFetch';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
