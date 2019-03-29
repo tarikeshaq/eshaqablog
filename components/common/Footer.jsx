@@ -22,43 +22,41 @@ export default class Footer extends Component {
 
      render() {
         return (
-            <footer className="page-footer font-small indigo">
+            <footer>
                 <Container>
                     <Row>
-                        <Col><h3 className="footerTitle">Tarik Eshaq</h3></Col>
+                        <Col className="colFooter"><h3 className="footerTitle">Tarik Eshaq</h3></Col>
                     </Row>
                     <Row>
-                        <Col>
-                            <p onClick={() => {Router.push('/blogs')}}>Blog</p>
+                        <Col className="colFooter">
+                            <p className="navigateFooter" onClick={() => {Router.push('/blogs')}}>Blog</p>
                         </Col>
-                        <Col>
-                            <p onClick = {() => {Router.push('/about')}}>About me</p>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <div>
-                                <p onClick={() => {Router.push('/portfolio')}}> Portfolio</p>
-                            </div>
-                        </Col>
-                        <Col>
-                            <p onClick={() => {Router.push('/contact')}}> Contact me</p>
+                        <Col className="colFooter">
+                            <p className="navigateFooter" onClick = {() => {Router.push('/about')}}>About me</p>
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
+                        <Col className="colFooter">
+                            <p className="navigateFooter" onClick={() => {Router.push('/portfolio')}}> Portfolio</p>
+                        </Col >
+                        <Col className="colFooter">
+                            <p className="navigateFooter" onClick={() => {Router.push('/contact')}}> Contact me</p>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="colFooter">
                             <FontAwesomeIcon className="icon" onClick={() => {window.open("https://www.linkedin.com/in/tarikeshaq/", '__blank')}} icon={ faLinkedin } />
                         </Col>
-                        <Col>
+                        <Col className="colFooter">
                             <FontAwesomeIcon className="icon" onClick={() => {window.open("https://github.com/tarikeshaq", '__blank')}} icon = { faGithub } />
                         </Col>
-                        <Col>
+                        <Col className="colFooter">
                             <FontAwesomeIcon className="icon" onClick={() => {window.open("https://www.goodreads.com/user/show/77719569-tarik", '__blank')}} icon = { faGoodreads } />
                         </Col>
-                        <Col>
+                        <Col className="colFooter">
                             <FontAwesomeIcon className="icon" onClick={() => {this.sendMail();}}icon = { faEnvelope } />
                         </Col>
-                        <Col>
+                        <Col className="colFooter">
                             <Container>
                                 <FontAwesomeIcon  icon = { faCopyright } />
                                 <span className="copyright">Tarik Eshaq 2019</span>
