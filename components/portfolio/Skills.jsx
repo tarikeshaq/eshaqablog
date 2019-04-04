@@ -5,8 +5,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 export default class Skills extends Component {
   render() {
     return (
-        <Container>
-            <h3 > What I what you to think I can do </h3>
+        <Container className="portfolio-section">
+            <h6 > What I what you to think I can do </h6>
             <ListGroup variant="flush">
                 <ListGroup.Item> Make stuff like this site </ListGroup.Item>
                 <ListGroup.Item> Speak in many languages: JavaScript/TypeScript, C++, Python, Java, C#, C Golang </ListGroup.Item>

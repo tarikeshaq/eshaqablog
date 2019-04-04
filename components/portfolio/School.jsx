@@ -5,8 +5,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 export default class School extends Component {
   render() {
     return (
-        <Container>
-            <h3 >What I had to pay to do (UBC Business & Computer Science) </h3>
+      <Container className="portfolio-section">
+      <h6 >What I had to pay to do (UBC Business & Computer Science) </h6>
             <ListGroup variant="flush">
                 <ListGroup.Item> Learn to be who I want to be rather than who people expect me to be </ListGroup.Item>
                 <ListGroup.Item> Drink unhealthy amounts of paid coffee, occationally write homework and read papers </ListGroup.Item>
@@ -15,7 +15,7 @@ export default class School extends Component {
                 <ListGroup.Item> Explore my passion for Education and Technology and how I hope we use them to change the world! Please let me know if you want to speak about this, I won't shut up</ListGroup.Item>
                 <ListGroup.Item> I also did classes and stuff </ListGroup.Item>
             </ListGroup>
-    </Container>
+      </Container>
     )
   }
 }

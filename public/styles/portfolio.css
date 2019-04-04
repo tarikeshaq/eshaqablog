@@ -1,0 +1,16 @@
+.list-group-item {
+    background-color:  #393f4d;
+    /* #343a40!important;*/
+}
+.portfolio {
+    color:#d4d4dc;
+}
+
+.portfolio-section {
+    border: solid white 5px;
+    border-radius: 1.5rem;
+}
+
+h6 {
+    margin-top: 5%
+}
