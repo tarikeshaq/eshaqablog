@@ -5,8 +5,8 @@ import ListGroup from 'react-bootstrap/ListGroup';
 export default class Work extends Component {
   render() {
     return (
-      <Container>
-          <h3 >What I was payed to do (SAP) </h3>
+      <Container className="portfolio-section">
+      <h6 >What I was payed to do (SAP) </h6>
           <ListGroup variant="flush">
             <ListGroup.Item> Build an amazing family of 15 people </ListGroup.Item>
             <ListGroup.Item> Drink unhealthy amounts of free coffee, occationally write production level code </ListGroup.Item>

@@ -7,4 +7,5 @@ body, html, #__next {
 .page {
     min-height: 100%;
     position: relative;
+    background-color: #343a40!important;
 }
