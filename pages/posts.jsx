@@ -8,12 +8,11 @@ import { fakeFetch } from '../api/fakeFetch';
 
 
 export default class Posts extends Component {
-  static async getInitialProps() {
+  static async getInitialProps({query}) {
+    // query.postId has the id to be requested from backend
     return fakeFetch('post').then(response => { // get post from URL
         return { 
-            title: response.title,
-            content: response.content,
-            date: response.date
+            ...response
          }
     });
 }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class PostContent extends Component {
+export default class DefaultPostContent extends Component {
   render() {
     return (
       <div>
-        <p>{this.props.content}</p>
+        
       </div>
     )
   }
