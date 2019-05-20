@@ -4,18 +4,15 @@ import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
 import '../public/styles/page.css';
 import PostsContainer from '../components/posts/PostsContainer';
-import { fakeFetch } from '../api/fakeFetch';
-
+import fetch from 'isomorphic-unfetch'
 
 export default class Posts extends Component {
   static async getInitialProps({query}) {
     // query.postId has the id to be requested from backend
-    return fakeFetch('post').then(response => { // get post from URL
-        return { 
-            ...response
-         }
-    });
-}
+    const response = await fetch('https://morning-stream-77102.herokuapp.com/blogs/'+query.postId);
+    const post = await response.json()
+    return post
+  }
   render() {
     return (
       <div className="page">
