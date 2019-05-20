@@ -6,12 +6,11 @@ import '../../public/styles/footer.css'
 import Container from 'react-bootstrap/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faCopyright } from '@fortawesome/free-regular-svg-icons'
-import { faLinkedin, faGithub, faGoodreads, faMailchimp } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub, faGoodreads } from '@fortawesome/free-brands-svg-icons'
 export default class Footer extends Component {
     constructor(props) {
         super(props);
     }
-
 
     sendMail() {
         const link = "mailto:tarikeshaq@gmail.com"
