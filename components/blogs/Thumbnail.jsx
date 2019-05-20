@@ -13,9 +13,9 @@ export default class Thumbnail extends Component {
 
   render() {
     return (
-        <ThumbnailContainer id={this.state.id}>
+        <ThumbnailContainer id={this.state._id}>
             <ThumbnailImage image={this.state.image} />
-            <ThumbnailDescription title={this.state.title} description={this.state.description} />
+            <ThumbnailDescription title={this.state.title} description={this.state.summary} />
         </ThumbnailContainer>
     )
   }
