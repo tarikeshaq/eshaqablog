@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
-import AboutContainer from '../components/about/AboutContainer'
+import Meta from '../components/meta'
+import Page from '../layouts/main'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import '../public/styles/page.css';
+import AboutContainer from '../components/about/AboutContainer';
 
 export default class About extends Component {
   render() {
     return (
-      <div className="page">
-            <Header />
-            <AboutContainer />
-            <Footer />
-      </div>
-    );
+      <div style={{ height: '100%' }}>
+        <Meta />
+        <Page>
+          <AboutContainer />
+        </Page>
+      </div>);
   }
 }

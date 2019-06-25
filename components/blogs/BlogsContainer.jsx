@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import Thumbnail from './Thumbnail';
-import Col from 'react-bootstrap/Col' 
+import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row';
-import Container from 'react-bootstrap/Container';
-import '../../public/styles/bodyContainer.css';
+import BodyContainer from '../common/BodyContainer';
 
-export  class BlogsContainer extends Component {
+export class BlogsContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,9 +40,9 @@ export  class BlogsContainer extends Component {
       </Row>)
     }
     return (
-      <Container className="bodyContainer">
+      <BodyContainer>
         {rowedThumbnails}
-      </Container>
+      </BodyContainer>
     )
   }
 }
