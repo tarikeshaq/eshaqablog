@@ -1,19 +1,20 @@
 import * as React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../public/styles/page.css';
 import LandingContainer from '../components/landing/LandingContainer';
-import Footer from '../components/common/Footer';
+import Meta from '../components/meta';
+import Page from '../layouts/main';
 export default class Landing extends React.Component {
 
-     constructor(props) {
-        super(props);
-    }
+  constructor(props) {
+    super(props);
+  }
 
-     render() { // TODO remove footer
-        return (
-            <div className="page">
-              <LandingContainer />
-              <Footer />
-            </div>);
-    }
+  render() { // TODO remove footer
+    return (
+      <div style={{ height: '100%' }}>
+        <Meta />
+        <Page>
+          <LandingContainer />
+        </Page>
+      </div>);
+  }
 }

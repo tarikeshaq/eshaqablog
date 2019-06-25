@@ -1,11 +1,9 @@
 import * as React from 'react';
 import { BlogsContainer } from '../components/blogs/BlogsContainer';
-import Header from '../components/common/Header';
-import Footer from '../components/common/Footer';
 import fetch from 'isomorphic-unfetch'
+import Page from '../layouts/main'
+import Meta from '../components/meta'
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../public/styles/page.css';
 
 export default class Blogs extends React.Component {
 
@@ -16,16 +14,17 @@ export default class Blogs extends React.Component {
             posts: [...posts]
         };
     }
-     constructor(props) {
+    constructor(props) {
         super(props);
     }
 
-     render() {
+    render() {
         return (
-            <div className="page">
-                <Header />
-                <BlogsContainer { ...this.props }/>
-                <Footer />
+            <div style={{ height: '100%' }}>
+                <Meta />
+                <Page>
+                    <BlogsContainer {...this.props} />
+                </Page>
             </div>);
     }
 }

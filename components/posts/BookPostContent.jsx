@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
-import '../../public/styles/bookPost.css'
+import styled from 'styled-components';
 
 class Stars extends Component {
-    render() {
-      return (
-        <div>
-          <h2>{this.props.stars} Stars</h2>
-        </div>
-      );
-    }
+  render() {
+    return (
+      <div>
+        <h2>{this.props.stars} Stars</h2>
+      </div>
+    );
+  }
 }
 
 function Overall(props) {
@@ -20,32 +20,48 @@ function Overall(props) {
   });
 }
 
+const PostContainer = styled(Container)`
+  font-family: 'Raleway', sans-serif;
+  line-height: 300%
+`;
+
+const PostText = styled.p`
+  font-size: 1.5rem;
+`;
+
+const PostTitle = styled.h4`
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+`;
+
+
 
 export default class PostContent extends Component {
   render() {
-    //let overall = JSON.stringify(this.props.overall);
-    //overall = escape(overall);
+
 
     return (
-      <Container className="post">
+      <PostContainer className="post">
         <Container className="overall">
-          <h4>Overall Summary</h4>
-          <Overall overall = {this.props.overall}/>
+          <PostTitle>Overall Summary</PostTitle>
+          <Overall overall={this.props.overall} />
         </Container>
         <Container className="like">
-          <h4>What I liked most about the book</h4>
-          <p>{this.props.like}</p>
+          <PostTitle>What I liked most about the book</PostTitle>
+          <PostText>{this.props.like}</PostText>
         </Container>
         <Container className="not-like">
-          <h4>What I liked least about the book</h4>
-          <p>{this.props.not_like}</p>
+          <PostTitle>What I liked least about the book</PostTitle>
+          <PostText>{this.props.not_like}</PostText>
         </Container>
         <Container className="rating">
-          <h4>Rating</h4>
+          <PostTitle>Rating</PostTitle>
           <Stars stars={this.props.rating} />
-          <p>{this.props.rating_desc}</p>
+          <PostText>{this.props.rating_desc}</PostText>
         </Container>
-      </Container>
+      </PostContainer>
     )
   }
 }

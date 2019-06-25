@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
-import Container from 'react-bootstrap/Container';
-import '../../public/styles/bodyContainer.css';
+import BodyContainer from '../common/BodyContainer';
 
 export default class ContactContainer extends Component {
   render() {
     return (
-      <Container className="bodyContainer">
+      <BodyContainer>
         <h2>ContactContainer</h2>
-      </Container>
+      </BodyContainer>
     )
   }
 }

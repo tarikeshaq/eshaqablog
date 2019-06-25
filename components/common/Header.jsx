@@ -5,33 +5,30 @@ import Link from 'next/link';
 
 
 export default class Header extends Component {
-  render() {
-    return (
-        <Navbar  style={{backgroundColor: '#8860d0'}}expand="lg" variant="dark">
-            <Link href="/">
-                <a className='navbar-brand'>
-                    Tarik Eshaq
+    render() {
+        return (
+            <Navbar style={{ backgroundColor: '#8860d0' }} expand="lg" variant="dark">
+                <Link href="/">
+                    <a className='navbar-brand'>
+                        Tarik Eshaq
                 </a>
-            </Link>
-            <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="mr-auto">
-                    <Link href="/blogs" >
-                        <a className="nav-link">Blogs</a>
-                    </Link>
-                    <Link href="/portfolio">
-                        <a className="nav-link">Portfolio</a>
-                    </Link>
-                </Nav>
-                <Nav>
-                    <Link href='/contact'>
-                        <a className='nav-link'>Contact Me</a>
-                    </Link>
-                    <Link href="/about">
-                        <a className='nav-link'>About me</a>
-                    </Link>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar>
-    )
-  }
+                </Link>
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Link href="/blogs" >
+                            <a className="nav-link">Blogs</a>
+                        </Link>
+                        <Link href="/about">
+                            <a className="nav-link">About</a>
+                        </Link>
+                    </Nav>
+                    <Nav>
+                        <Link href='/contact'>
+                            <a className='nav-link'>Contact Me</a>
+                        </Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+        )
+    }
 }
