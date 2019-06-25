@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Meta from '../components/meta'
 import Page from '../layouts/main'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import AboutContainer from '../components/about/AboutContainer';
 
 export default class About extends Component {

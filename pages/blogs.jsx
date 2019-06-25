@@ -1,10 +1,8 @@
 import * as React from 'react';
 import { BlogsContainer } from '../components/blogs/BlogsContainer';
 import fetch from 'isomorphic-unfetch'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Page from '../layouts/main'
 import Meta from '../components/meta'
-import styled from 'styled-components';
 
 
 export default class Blogs extends React.Component {
