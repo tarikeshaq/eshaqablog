@@ -13,7 +13,6 @@ const StyledFooter = styled.footer`
     bottom: 0;
     width: 100%;
     height: 150px;
-    background-color: #8860d0;
     color: white;
 `;
 

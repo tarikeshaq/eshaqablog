@@ -15,7 +15,7 @@ class Stars extends Component {
 function Overall(props) {
   return props.overall.split('\n').map((section, index) => {
     return (
-      <p key={index}>{section}</p>
+      <p style={{ fontSize: "1.5rem", color: "white" }} key={index}>{section}</p>
     );
   });
 }
@@ -23,10 +23,12 @@ function Overall(props) {
 const PostContainer = styled(Container)`
   font-family: 'Raleway', sans-serif;
   line-height: 300%
+  color: white;
 `;
 
 const PostText = styled.p`
   font-size: 1.5rem;
+  color: white;
 `;
 
 const PostTitle = styled.h4`
@@ -34,6 +36,7 @@ const PostTitle = styled.h4`
   text-align: center;
   font-weight: bold;
   font-size: 2.5rem;
+  color: white;
 `;
 
 

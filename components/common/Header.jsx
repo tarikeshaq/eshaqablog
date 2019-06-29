@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default class Header extends Component {
     render() {
         return (
-            <Navbar style={{ backgroundColor: '#8860d0' }} expand="lg" variant="dark">
+            <Navbar expand="lg" variant="dark" >
                 <Link href="/">
                     <a className='navbar-brand'>
                         Tarik Eshaq
@@ -28,7 +28,7 @@ export default class Header extends Component {
                         </Link>
                     </Nav>
                 </Navbar.Collapse>
-            </Navbar>
+            </Navbar >
         )
     }
 }
