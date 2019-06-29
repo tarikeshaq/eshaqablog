@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Meta from '../components/meta'
-import Page from '../layouts/main'
+import React, { Component } from 'react';
+import Meta from '../components/meta';
+import Page from '../layouts/main';
 import AboutContainer from '../components/about/AboutContainer';
 
 export default class About extends Component {
