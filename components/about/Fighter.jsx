@@ -6,7 +6,9 @@ import styled from 'styled-components';
 const FigherContainer = styled.div`
     position: absolute;
     left: 15%;
-    top: 25%;
+    top: 40%;
+    width: 20%;
+    height: 20%;
 `;
 
 

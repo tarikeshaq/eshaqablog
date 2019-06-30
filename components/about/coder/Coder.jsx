@@ -3,7 +3,7 @@ import { fadeIn } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
 import AnimatedContainer, { DelayedComponent } from './AnimatedContainer';
 import ProgrammingLanguages from './ProgrammingLanguages';
-
+import Technologies from './Technologies';
 const FadeInAnimation = keyframes`${fadeIn}`;
 
 const FadingP = styled.p`
@@ -13,14 +13,14 @@ const FadingP = styled.p`
 const CoderContainer = styled.div`
     position: absolute;
     left: 75%;
-    top: 50%;
+    top: 10%;
     color: white;
 `;
 
 export default class Coder extends AnimatedContainer {
     constructor(props) {
         super(props);
-        this.maxCount = 5;
+        this.maxCount = 2;
     }
 
     render() {
@@ -31,16 +31,7 @@ export default class Coder extends AnimatedContainer {
                     <ProgrammingLanguages />
                 </DelayedComponent>
                 <DelayedComponent count={this.state.count} order={2}>
-                    <FadingP style={{ color: "white" }}>HI</FadingP>
-                </DelayedComponent>
-                <DelayedComponent count={this.state.count} order={3} >
-                    <FadingP style={{ color: "white" }}>HI</FadingP>
-                </DelayedComponent>
-                <DelayedComponent count={this.state.count} order={4} >
-                    <FadingP style={{ color: "white" }}>HI</FadingP>
-                </DelayedComponent>
-                <DelayedComponent count={this.state.count} order={5} >
-                    <FadingP style={{ color: "white" }}>HI</FadingP>
+                    <Technologies />
                 </DelayedComponent>
             </CoderContainer>
         )

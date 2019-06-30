@@ -12,10 +12,8 @@ const Image = styled.img`
     border-radius: 100%;
     text-align: center;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-top: -125px;
-    margin-left: -125px;
+    left: 42.5%;
+    top: 35%;
     animation: 2s ${SlideAnimation};
 `;
 
