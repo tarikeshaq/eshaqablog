@@ -12,12 +12,8 @@ const StyledFooter = styled.footer`
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 150px;
+    height: 40px;
     color: white;
-`;
-
-const StyledFooterTitle = styled.h3`
-    text-align: center
 `;
 
 const StyledCol = styled(Col)`
@@ -53,22 +49,6 @@ export default class Footer extends Component {
         return (
             <StyledFooter>
                 <Container>
-                    <Row>
-                        <StyledCol><StyledFooterTitle>Tarik Eshaq</StyledFooterTitle></StyledCol>
-                    </Row>
-                    <Row>
-                        <StyledCol>
-                            <StyledNavigate onClick={() => { Router.push('/blogs') }}>Blog</StyledNavigate>
-                        </StyledCol>
-                    </Row>
-                    <Row>
-                        <StyledCol>
-                            <StyledNavigate onClick={() => { Router.push('/about') }}> About me</StyledNavigate>
-                        </StyledCol >
-                        <StyledCol>
-                            <StyledNavigate onClick={() => { Router.push('/contact') }}> Contact me</StyledNavigate>
-                        </StyledCol>
-                    </Row>
                     <Row>
                         <StyledCol>
                             <ClickableIcon onClick={() => { window.open("https://www.linkedin.com/in/tarikeshaq/", '__blank') }} icon={faLinkedin} />
