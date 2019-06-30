@@ -1,14 +1,8 @@
 import React from 'react'
-import { fadeIn } from 'react-animations';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import AnimatedContainer, { DelayedComponent } from './AnimatedContainer';
 import ProgrammingLanguages from './ProgrammingLanguages';
 import Technologies from './Technologies';
-const FadeInAnimation = keyframes`${fadeIn}`;
-
-const FadingP = styled.p`
-    animation: 2s ${FadeInAnimation};
-`;
 
 const CoderContainer = styled.div`
     position: absolute;

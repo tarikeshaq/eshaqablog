@@ -1,7 +1,5 @@
 import React from 'react';
 import AnimatedContainer, { DelayedFadingSpan, DelayedFadingContainer } from './AnimatedContainer';
-import styled from 'styled-components';
-import Image from 'react-bootstrap/Image';
 import IconImage from './IconImage';
 
 export default class ProgrammingLanguages extends AnimatedContainer {

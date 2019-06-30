@@ -12,7 +12,14 @@ const FadingDiv = styled.div`
     animation: 2s ${FadeInAnimation};
 `;
 
+const ANIMATION_TIME = 2000; // 2s
 
+
+// Important
+//
+// To extend this,
+// (Manditory) Set the this.maxCount to the number elements that will be animated (Default 5)
+// (Optional)  Set this.animationTime to be the time of each animation (Default 2s)
 export default class AnimatedContainer extends Component {
     constructor(props) {
         super(props);
@@ -21,6 +28,7 @@ export default class AnimatedContainer extends Component {
         };
         this.maxCount = 5;
         this.updating = Promise.resolve();
+        this.animationTime = ANIMATION_TIME;
     }
 
     componentDidMount() {
@@ -52,7 +60,7 @@ export default class AnimatedContainer extends Component {
                         this.lock = false;
                         resolve();
                     });
-                }, 2000);
+                }, this.animationTime);
             });
         });
     }
