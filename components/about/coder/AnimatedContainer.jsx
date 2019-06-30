@@ -8,6 +8,9 @@ const FadeInAnimation = keyframes`${fadeIn}`;
 const FadingSpan = styled.span`
     animation: 2s ${FadeInAnimation};
 `;
+const FadingDiv = styled.div`
+    animation: 2s ${FadeInAnimation};
+`;
 
 
 export default class AnimatedContainer extends Component {
@@ -76,4 +79,12 @@ export function DelayedComponent(props) {
     } else {
         return null;
     }
+}
+
+export function DelayedFadingContainer(props) {
+    return (
+        <DelayedComponent count={props.count} order={props.order}>
+            <FadingDiv>{props.children}</FadingDiv>
+        </DelayedComponent>
+    );
 }

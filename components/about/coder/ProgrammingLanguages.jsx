@@ -1,8 +1,7 @@
 import React from 'react';
-import AnimatedContainer, { DelayedFadingSpan } from './AnimatedContainer';
+import AnimatedContainer, { DelayedFadingSpan, DelayedFadingContainer } from './AnimatedContainer';
 import styled from 'styled-components';
 import Image from 'react-bootstrap/Image';
-
 
 const ProgrammingLanguageImage = styled(Image)`
     width: 10%;
@@ -18,8 +17,8 @@ export default class ProgrammingLanguages extends AnimatedContainer {
 
     render() {
         return (
-            <div>
-                <div>ProgrammingLanguages:</div>
+            <DelayedFadingContainer count={this.state.count} order={0}>
+                <h5>ProgrammingLanguages</h5>
                 <DelayedFadingSpan count={this.state.count} order={1}>
                     <ProgrammingLanguageImage src="/static/images/gopher.png" roundedCircle fluid></ProgrammingLanguageImage>
                 </DelayedFadingSpan>
@@ -38,7 +37,7 @@ export default class ProgrammingLanguages extends AnimatedContainer {
                 <DelayedFadingSpan count={this.state.count} order={6}>
                     <ProgrammingLanguageImage src="/static/images/c.png" roundedCircle fluid></ProgrammingLanguageImage>
                 </DelayedFadingSpan>
-            </div>
+            </DelayedFadingContainer>
         )
     }
 }
