@@ -3,7 +3,7 @@ import BodyContainer from '../common/BodyContainer';
 import PersonalImage from './PersonalImage';
 import Fighter from './Fighter';
 import Learner from './Learner';
-import Coder from './Coder';
+import Coder from './coder/Coder';
 
 export default class AboutContainer extends Component {
   render() {
