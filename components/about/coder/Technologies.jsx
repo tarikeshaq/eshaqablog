@@ -5,7 +5,7 @@ import IconImage from './IconImage';
 export default class Technologies extends AnimatedContainer {
     constructor(props) {
         super(props);
-        this.maxCount = 18;
+        this.maxCount = 3;
     }
 
     render() {
