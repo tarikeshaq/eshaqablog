@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Card from 'react-bootstrap/Card';
-import { TransparentCard, CenteredHeader } from './StyledCard';
 import styled from 'styled-components';
 
 const FigherContainer = styled.div`
@@ -9,6 +7,7 @@ const FigherContainer = styled.div`
     top: 40%;
     width: 20%;
     height: 20%;
+    color: white;
 `;
 
 
@@ -16,17 +15,12 @@ export default class Fighter extends Component {
     render() {
         return (
             <FigherContainer>
-                <TransparentCard bg="dark" text="white" style={{ width: '18rem' }}>
-                    <CenteredHeader>Fighter</CenteredHeader>
-                    <Card.Body>
-                        <Card.Text>
-                            Growing up in Yemen, surviving an Airstrike, living as a Refugee,
-                            it all tought me to fight. I've always believed in the power of growth, and I will always
-                            fight for it.
-                        </Card.Text>
-                    </Card.Body>
-                </TransparentCard>
-                <br />
+                <h3>Fighter</h3>
+                <div>
+                    <p>Growing up in Yemen, surviving an Airstrike, living as a Refugee,
+                            it all tought me to fight. I've always believed in growth, and I will always
+                            fight for it.</p>
+                </div>
             </FigherContainer>
         )
     }

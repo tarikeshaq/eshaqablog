@@ -1,12 +1,23 @@
-import React, { Component } from 'react'
-import TypeIt from 'typeit'
+import React, { Component } from 'react';
+import TypeIt from 'typeit';
+import styled from 'styled-components';
+
+const TypeItSpan = styled.span`
+    color: white;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    position: absolute; 
+    top: 50%;
+    font-size: 30px;
+`;
 
 export default class Type extends Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
     }
-      
-    componentDidMount () {
+
+    componentDidMount() {
         new TypeIt(this.el, this.props)
             .type("Hi there!")
             .pause(1000)
@@ -17,10 +28,10 @@ export default class Type extends Component {
             .type("Feel free to check out my blog posts and reach out, even if just for a cup of coffee")
             .pause(1000)
             .delete()
-            .go(); 
-        }
-      
-    render(){
-    return <span style={{color: "white", margin: "auto", textAlign: "center", 
-    display: "inline-block", position:"absolute", top:"50%",fontSize: "30px" }} ref={(el) => { this.el = el; }}>{this.props.children}</span>    }
+            .go();
+    }
+
+    render() {
+        return (<TypeItSpan ref={(el) => { this.el = el; }}>{this.props.children}</TypeItSpan>);
+    }
 }
