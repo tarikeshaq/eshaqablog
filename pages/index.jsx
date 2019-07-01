@@ -8,6 +8,15 @@ export default class Landing extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    import('tic-tac-rust').then(({ State }) => {
+      const game = State.new(1);
+      this.setState({
+        game: game
+      });
+    });
+  }
+
   render() { // TODO remove footer
     return (
       <div style={{ height: '100%' }}>
