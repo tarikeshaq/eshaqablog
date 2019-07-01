@@ -9,7 +9,7 @@ const TypeItSpan = styled.span`
     display: inline-block;
     position: absolute; 
     top: 50%;
-    fontSize: 30px;
+    font-size: 30px;
 `;
 
 export default class Type extends Component {
