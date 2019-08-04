@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const FigherContainer = styled.div`
-    position: absolute;
-    left: 75%;
-    top: 60%;
-    width: 20%;
-    height: 20%;
+const LearnerContainer = styled.div`
+
     color: white;
 `;
 
@@ -14,7 +10,7 @@ const FigherContainer = styled.div`
 export default class Learner extends Component {
     render() {
         return (
-            <FigherContainer>
+            <LearnerContainer>
                 <h3>Learner</h3>
                 <div>
                     <h5>University of British Columbia</h5>
@@ -23,7 +19,7 @@ export default class Learner extends Component {
                         <li>Deans Honor List</li>
                     </ul>
                 </div>
-            </FigherContainer>
+            </LearnerContainer>
         )
     }
 }
