@@ -6,6 +6,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import VisiableOnStateContainer from './VisibleOnStateContainer';
 import TicTacToe from './TicTacToe';
 import styled from 'styled-components';
+import Container from 'react-bootstrap/Container';
 
 const GameArea = styled.div`
 text-align: center;
@@ -69,15 +70,15 @@ export default class LandingContainer extends Component {
           speed={70}
         />
         <GameArea>
-          <div>
+          <Container>
             <VisiableOnStateContainer state={!this.state.gameStarted}>
               <ButtonGroup aria-label="X or O">
                 <Button onClick={() => this.onSetX(true)} variant="light">X</Button>
                 <Button onClick={() => this.onSetX(false)} variant="light">O</Button>
               </ButtonGroup>
             </VisiableOnStateContainer>
-          </div>
-          <div>
+          </Container>
+          <Container>
             <VisiableOnStateContainer state={!this.state.gameStarted}>
               <ButtonGroup aria-label="Difficulty">
                 <Button onClick={() => this.onSetDifficulty(0)} variant="light">Easy</Button>
@@ -85,17 +86,17 @@ export default class LandingContainer extends Component {
                 <Button onClick={() => this.onSetDifficulty(2)} variant="light">Hard</Button>
               </ButtonGroup>
             </VisiableOnStateContainer>
-          </div>
-          <div>
+          </Container>
+          <Container>
             <VisiableOnStateContainer state={!this.state.gameStarted}>
               <Button onClick={() => this.onStartGame()} variant="light">Start Game!</Button>
             </VisiableOnStateContainer>
-          </div>
-          <div>
+          </Container>
+          <Container>
             <VisiableOnStateContainer state={this.state.gameStarted}>
               <TicTacToe onGameEnd={() => { this.gameEnd() }} game={this.state.game} difficulty={this.state.difficulty} isX={this.state.isX} />
             </VisiableOnStateContainer>
-          </div>
+          </Container>
         </GameArea>
       </BodyContainer>
     )
