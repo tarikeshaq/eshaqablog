@@ -27,9 +27,7 @@ export default class Header extends Component {
                         </Link>
                     </Nav>
                     <Nav>
-                        <Link href='/contact'>
-                            <a className='nav-link'>Contact Me</a>
-                        </Link>
+                        <a href="/static/resume/Tarik_Eshaq_Resume.pdf" className='nav-link' download="Tarik_Eshaq_Resume">Resume</a>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar >
