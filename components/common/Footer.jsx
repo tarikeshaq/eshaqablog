@@ -65,7 +65,6 @@ export default class Footer extends Component {
                         <StyledCol>
                             <Container>
                                 <ClickableIcon icon={faCopyright} />
-                                <span className="copyright">Tarik Eshaq 2019</span>
                             </Container>
                         </StyledCol>
                     </Row>

@@ -7,11 +7,10 @@ const SlideAnimation = keyframes`${SlideAndFade}`;
 
 
 const Image = styled.img`
-    width: 15%;
-    height: 30%;
+    width: 300px;
+    height: 350px;
     border-radius: 100%;
     text-align: center;
-    position: absolute;
     left: 42.5%;
     top: 35%;
     animation: 2s ${SlideAnimation};

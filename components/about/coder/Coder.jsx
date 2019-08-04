@@ -5,7 +5,6 @@ import ProgrammingLanguages from './ProgrammingLanguages';
 import Technologies from './Technologies';
 
 const CoderContainer = styled.div`
-    position: absolute;
     left: 75%;
     top: 10%;
     color: white;
