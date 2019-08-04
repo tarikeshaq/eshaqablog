@@ -4,20 +4,7 @@ import Meta from '../components/meta';
 import Page from '../layouts/main';
 export default class Landing extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
-
-  componentDidMount() {
-    import('tic-tac-rust').then(({ State }) => {
-      const game = State.new(1);
-      this.setState({
-        game: game
-      });
-    });
-  }
-
-  render() { // TODO remove footer
+  render() {
     return (
       <div style={{ height: '100%' }}>
         <Meta />

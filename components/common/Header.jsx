@@ -2,17 +2,21 @@ import React, { Component } from 'react'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Link from 'next/link';
+import Router from 'next/router';
 
 
 export default class Header extends Component {
+    goToMain() {
+        Router.push("/");
+    }
+
     render() {
         return (
             <Navbar expand="lg" variant="dark" >
-                <Link href="/">
-                    <a className='navbar-brand'>
-                        Tarik Eshaq
-                </a>
-                </Link>
+                <Navbar.Brand style={{ cursor: "pointer" }} onClick={() => this.goToMain()}>
+                    Tarik Eshaq
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
                         <Link href="/blogs" >
