@@ -19,7 +19,7 @@ export default class Coder extends AnimatedContainer {
     render() {
         return (
             <CoderContainer>
-                <h3>Coder</h3>
+                <h3><strong>Coder</strong></h3>
                 <DelayedComponent count={this.state.count} order={1}>
                     <ProgrammingLanguages />
                 </DelayedComponent>

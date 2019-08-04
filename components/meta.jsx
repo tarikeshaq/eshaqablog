@@ -11,7 +11,7 @@ export default () => (
         height: 100%;
         margin: 0;
         padding: 0;
-        background-image: url("/static/images/background.jpg");
+        background-color: #2B7A78;
         background-size:     cover;                      /* <------ */
     background-position: center center;   
     font-family: 'Raleway', sans-serif;

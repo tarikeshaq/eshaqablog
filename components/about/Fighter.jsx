@@ -10,7 +10,7 @@ export default class Fighter extends Component {
     render() {
         return (
             <FigherContainer>
-                <h3>Fighter</h3>
+                <h3><strong>Fighter</strong></h3>
                 <div>
                     <p>Growing up in Yemen, surviving an Airstrike, living as a Refugee,
                             it all tought me to fight. I've always believed in growth, and I will always
