@@ -4,10 +4,14 @@ import PersonalImage from './PersonalImage';
 import Fighter from './Fighter';
 import Learner from './Learner';
 import Coder from './coder/Coder';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import styled from 'styled-components';
 const CenteredRow = styled(Row)`
-  text-align: center
+  text-align: center;
+`;
+
+const PaddedCol = styled(Col)`
+  padding-bottom: 5%;
 `;
 
 export default class AboutContainer extends Component {
@@ -15,23 +19,21 @@ export default class AboutContainer extends Component {
     return (
       <BodyContainer style={{ maxWidth: 'none', overflowX: "hidden" }}>
         <CenteredRow>
-          <Col sm={12} md={12} lg={4}>
+          <PaddedCol sm={12} md={12} lg={4}>
             <PersonalImage />
-          </Col>
-          <Col sm={12} md={12} lg={4}>
+          </PaddedCol>
+          <PaddedCol sm={12} md={12} lg={4}>
             <Fighter />
-          </Col>
-          <Col sm={12} md={12} lg={4}>
+          </PaddedCol>
+          <PaddedCol sm={12} md={12} lg={4}>
             <Coder />
-          </Col>
+          </PaddedCol>
         </CenteredRow>
         <CenteredRow>
           <Col>
             <Learner />
           </Col>
         </CenteredRow>
-
-
       </BodyContainer>
     )
   }

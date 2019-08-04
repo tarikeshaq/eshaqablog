@@ -11,12 +11,12 @@ export default class Learner extends Component {
     render() {
         return (
             <LearnerContainer>
-                <h3>Learner</h3>
+                <h3><strong>Learner</strong></h3>
                 <div>
-                    <h5>University of British Columbia</h5>
+                    <h5><i>University of British Columbia</i></h5>
                     <ul>
-                        <li>Combined Major in Business and Computer Science</li>
-                        <li>Deans Honor List</li>
+                        <p>Combined Major in Business and Computer Science</p>
+                        <p>Deans Honor List</p>
                     </ul>
                 </div>
             </LearnerContainer>
