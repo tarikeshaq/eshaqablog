@@ -2,13 +2,11 @@ import React, { Component } from 'react';
 import TypeIt from 'typeit';
 import styled from 'styled-components';
 
-const TypeItSpan = styled.span`
+const TypeItSpan = styled.div`
     color: white;
     margin: auto;
     text-align: center;
-    display: inline-block;
-    position: absolute; 
-    top: 50%;
+    padding-top: 10%;
     font-size: 30px;
 `;
 

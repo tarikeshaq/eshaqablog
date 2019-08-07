@@ -11,9 +11,7 @@ import Container from 'react-bootstrap/Container';
 const GameArea = styled.div`
 text-align: center;
 margin: auto;
-position: absolute;
 left: 60%;
-width: 15%;
 `;
 
 export default class LandingContainer extends Component {
@@ -63,12 +61,6 @@ export default class LandingContainer extends Component {
   render() {
     return (
       <BodyContainer style={{ width: "100%", height: "100%", position: "absolute", textAlign: "center" }}>
-        <Type
-          loop={true}
-          loopDelay={2000}
-          nextStringDelay={500}
-          speed={70}
-        />
         <GameArea>
           <Container>
             <VisiableOnStateContainer state={!this.state.gameStarted}>
@@ -98,6 +90,12 @@ export default class LandingContainer extends Component {
             </VisiableOnStateContainer>
           </Container>
         </GameArea>
+        <Type
+          loop={true}
+          loopDelay={2000}
+          nextStringDelay={500}
+          speed={70}
+        />
       </BodyContainer>
     )
   }

@@ -9,9 +9,12 @@ const Square = styled.th`
 
 const Table = styled.table`
     width: 300px
+    text-align: center;
+    margin: auto;
 `;
 
 const Game = styled(Container)`
+    text-align: center;
     width: 100%;
     height: 100%;
 `;
@@ -21,7 +24,7 @@ function Won(props) {
     return (
         <div>
             <h3 style={{ color: "white" }}>{props.won == 1 ? "X Won!" : props.won == 2 ? "O Won!" : "It's a tie!"} </h3>
-            <Button onClick={() => props.callback()}>Click here for a new game!</Button>
+            <Button onClick={() => props.callback()}>New Game</Button>
         </div>
     );
 }
@@ -93,30 +96,31 @@ export default class TicTacToe extends Component {
     render() {
         return (
             <Game>
-                <Container>
-                    <VisiableOnStateContainer state={this.state.won != 0}>
-                        <StyledWon callback={() => this.props.onGameEnd()} won={this.state.won} />
-                    </VisiableOnStateContainer>
-                </Container>
-                <Table>
-                    <tbody>
-                        <tr>
-                            <Square style={{ borderRight: "solid white", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 0)}>{this.getCurrentVal(0)}</Square>
-                            <Square style={{ borderRight: "solid white", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 1)}>{this.getCurrentVal(1)}</Square>
-                            <Square style={{ borderRight: "solid transparent", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 2)}>{this.getCurrentVal(2)}</Square>
-                        </tr>
-                        <tr>
-                            <Square style={{ borderRight: "solid white", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 3)}>{this.getCurrentVal(3)}</Square>
-                            <Square style={{ borderRight: "solid white", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 4)}>{this.getCurrentVal(4)}</Square>
-                            <Square style={{ borderRight: "solid transparent", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 5)}>{this.getCurrentVal(5)}</Square>
-                        </tr>
-                        <tr>
-                            <Square style={{ borderRight: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 6)}>{this.getCurrentVal(6)}</Square>
-                            <Square style={{ borderRight: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 7)}>{this.getCurrentVal(7)}</Square>
-                            <Square onClick={() => this.onHumanChoose(this.state.isX, 8)}>{this.getCurrentVal(8)}</Square>
-                        </tr>
-                    </tbody>
-                </Table>
+                <VisiableOnStateContainer state={this.state.won != 0}>
+                    <StyledWon callback={() => this.props.onGameEnd()} won={this.state.won} />
+                </VisiableOnStateContainer>
+                <VisiableOnStateContainer state={this.state.won == 0}>
+                    <Table>
+                        <tbody>
+                            <tr>
+                                <Square style={{ borderRight: "solid white", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 0)}>{this.getCurrentVal(0)}</Square>
+                                <Square style={{ borderRight: "solid white", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 1)}>{this.getCurrentVal(1)}</Square>
+                                <Square style={{ borderRight: "solid transparent", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 2)}>{this.getCurrentVal(2)}</Square>
+                            </tr>
+                            <tr>
+                                <Square style={{ borderRight: "solid white", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 3)}>{this.getCurrentVal(3)}</Square>
+                                <Square style={{ borderRight: "solid white", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 4)}>{this.getCurrentVal(4)}</Square>
+                                <Square style={{ borderRight: "solid transparent", borderBottom: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 5)}>{this.getCurrentVal(5)}</Square>
+                            </tr>
+                            <tr>
+                                <Square style={{ borderRight: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 6)}>{this.getCurrentVal(6)}</Square>
+                                <Square style={{ borderRight: "solid white", borderWidth: "thick" }} onClick={() => this.onHumanChoose(this.state.isX, 7)}>{this.getCurrentVal(7)}</Square>
+                                <Square onClick={() => this.onHumanChoose(this.state.isX, 8)}>{this.getCurrentVal(8)}</Square>
+                            </tr>
+                        </tbody>
+                    </Table>
+                </VisiableOnStateContainer>
+
             </Game>
         );
     }
