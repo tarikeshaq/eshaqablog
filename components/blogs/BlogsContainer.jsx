@@ -3,6 +3,12 @@ import Thumbnail from './Thumbnail';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row';
 import BodyContainer from '../common/BodyContainer';
+import styled from 'styled-components';
+
+const BlogRow = styled(Row)`
+  max-width: 100%;
+`
+
 
 export class BlogsContainer extends Component {
   constructor(props) {
@@ -27,17 +33,17 @@ export class BlogsContainer extends Component {
     let i = 0;
     for (; i < thumbnailsToRender.length; i++) {
       if (i % 3 === 0 && i !== 0) {
-        rowedThumbnails.push(<Row className="mt-2 mb-2" key={i}>
+        rowedThumbnails.push(<BlogRow className="mt-2 mb-2" key={i}>
           {tempThumbnails}
-        </Row>);
+        </BlogRow>);
         tempThumbnails = [];
       }
       tempThumbnails.push(thumbnailsToRender[i]);
     }
     if (tempThumbnails.length) {
-      rowedThumbnails.push(<Row className="mt-2 mb-2" key={i}>
+      rowedThumbnails.push(<BlogRow className="mt-2 mb-2" key={i}>
         {tempThumbnails}
-      </Row>)
+      </BlogRow>)
     }
     return (
       <BodyContainer>
