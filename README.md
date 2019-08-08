@@ -12,7 +12,7 @@
   </a>
 </p>
 
-> A personal website built with Next.js, React and lots of love
+> A personal website built with Next.js, React and [this](https://github.com/tarikeshaq/tic-tac-rust) Rust WebAssembly application. The website uses [this](https://github.com/tarikeshaq/personal-blog-API) go backend for handing posts.
 
 ### 🏠 [Homepage](https://github.com/tarikeshaq/eshaqablog#readme)
 
@@ -27,6 +27,15 @@ npm install
 ```sh
 npm run build; npm run start
 ```
+
+## 🤓 Project structure
+* Pages: The pages themselves (index, blogs, post, about)
+* Layouts: Holds common layouts (Currently has the page layout)
+* Static: Static files, including photos and resume
+* Components: Holds the supporting components for each page
+
+Here's Basic diagram on how the pages work, for more info dig into the code or send [me](https://github.com/tarikeshaq) a message<br />
+<img height="450" src="https://i.ibb.co/r5XtNnn/eshaqablog.jpg">
 
 ## Author
 
