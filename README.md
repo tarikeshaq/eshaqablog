@@ -19,19 +19,13 @@
 ## Install
 
 ```sh
-npm  run build; npm run start
+npm install
 ```
 
 ## Usage
 
 ```sh
 npm run build; npm run start
-```
-
-## Run tests
-
-```sh
-npm run test
 ```
 
 ## Author
