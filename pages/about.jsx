@@ -6,7 +6,7 @@ import AboutContainer from '../components/about/AboutContainer';
 export default class About extends Component {
   render() {
     return (
-      <div style={{ height: '100%', overflow: "hidden" }}>
+      <div style={{ height: '100%' }}>
         <Meta />
         <Page>
           <AboutContainer />

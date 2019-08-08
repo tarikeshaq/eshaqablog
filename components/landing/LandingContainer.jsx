@@ -60,7 +60,7 @@ export default class LandingContainer extends Component {
 
   render() {
     return (
-      <BodyContainer style={{ width: "100%", height: "100%", position: "absolute", textAlign: "center" }}>
+      <BodyContainer style={{ width: "100%", height: "100%", textAlign: "center" }}>
         <GameArea>
           <Container>
             <VisiableOnStateContainer state={!this.state.gameStarted}>

@@ -11,13 +11,15 @@ const CenteredRow = styled(Row)`
 `;
 
 const PaddedCol = styled(Col)`
-  padding-bottom: 5%;
+  padding-bottom: 2%;
 `;
 
 export default class AboutContainer extends Component {
   render() {
     return (
-      <BodyContainer style={{ maxWidth: 'none', overflowX: "hidden" }}>
+      <BodyContainer style={{
+        maxWidth: 'none', overflowX: "hidden"
+      }}>
         <CenteredRow>
           <PaddedCol sm={12} md={12} lg={4}>
             <PersonalImage />
@@ -30,9 +32,9 @@ export default class AboutContainer extends Component {
           </PaddedCol>
         </CenteredRow>
         <CenteredRow>
-          <Col>
+          <PaddedCol>
             <Learner />
-          </Col>
+          </PaddedCol>
         </CenteredRow>
       </BodyContainer>
     )

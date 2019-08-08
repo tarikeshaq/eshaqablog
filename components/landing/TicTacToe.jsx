@@ -8,7 +8,7 @@ const Square = styled.th`
 `;
 
 const Table = styled.table`
-    width: 300px
+    width: 250px
     text-align: center;
     margin: auto;
 `;
@@ -31,12 +31,6 @@ function Won(props) {
 
 const StyledWon = styled(Won)`
     color: white;
-`;
-
-const TicTacToeContainer = styled(Container)`
-    position: absolute;
-    width: 50px;
-    height: 50px;
 `;
 
 export default class TicTacToe extends Component {

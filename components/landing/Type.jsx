@@ -23,7 +23,10 @@ export default class Type extends Component {
             .type("Thank you for taking the time to check out my site")
             .pause(1000)
             .delete()
-            .type("Feel free to check out my blog posts and reach out, even if just for a cup of coffee")
+            .type("Feel free to check out my blog posts and reach out")
+            .pause(1000)
+            .delete()
+            .type("Even if just for a cup of coffee!")
             .pause(1000)
             .delete()
             .go();
