@@ -1,8 +1,7 @@
 {
-  "name": "nextjs",
+  "name": "eshaqablog",
   "version": "1.0.0",
-  "description": "My next js personal website",
-  "main": "index.js",
+  "description": "A personal website built with Next.js, React and lots of love",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "next start",
@@ -10,7 +9,15 @@
     "build": "next build"
   },
   "author": "Tarik Eshaq",
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://github.com/tarikeshaq/eshaqablog#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tarikeshaq/eshaqablog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tarikeshaq/eshaqablog/issues"
+  }
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
     "@fortawesome/free-brands-svg-icons": "^5.8.1",
