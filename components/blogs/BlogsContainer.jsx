@@ -8,7 +8,11 @@ import styled from 'styled-components';
 const BlogRow = styled(Row)`
   max-width: 100%;
   text-align: center;
-`
+`;
+
+const BlogCol = styled(Col)`
+  padding-bottom: 3%
+`;
 
 
 export class BlogsContainer extends Component {
@@ -25,9 +29,9 @@ export class BlogsContainer extends Component {
         ...post,
         key: post.id
       }
-      return (<Col xs={12} md={4}>
+      return (<BlogCol xs={12} md={4}>
         <Thumbnail {...thumbnailProps} />
-      </Col>);
+      </BlogCol>);
     });
     const rowedThumbnails = [];
     let tempThumbnails = [];
