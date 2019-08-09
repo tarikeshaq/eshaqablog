@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'react-bootstrap/Image';
 import styled from 'styled-components';
+
 const Icon = styled(Image)`
     width: 10%;
     height: 10%;
@@ -8,7 +9,7 @@ const Icon = styled(Image)`
 `;
 
 export default function IconImage(props) {
-    return (
-        <Icon {...props} />
-    )
+  return (
+    <Icon {...props} />
+  );
 }

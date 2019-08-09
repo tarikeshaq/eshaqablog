@@ -1,11 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class PostTitle extends Component {
-  render() {
-    return (
-      <div>
-        <h5>{this.props.title}</h5>
-      </div>
-    )
-  }
+export default function PostTitle(props) {
+  const { title } = props;
+  return (
+    <div>
+      <h5>{title}</h5>
+    </div>
+  );
 }
+
+PostTitle.defaultProps = {
+  title: '',
+};
+
+PostTitle.propTypes = {
+  title: PropTypes.string,
+};

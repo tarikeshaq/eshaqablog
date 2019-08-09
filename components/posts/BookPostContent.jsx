@@ -1,23 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import styled from 'styled-components';
 
-class Stars extends Component {
-  render() {
-    return (
-      <div>
-        <h2>{this.props.stars} Stars</h2>
-      </div>
-    );
-  }
+function Stars(props) {
+  const { stars } = props;
+  return (
+    <div>
+      <h2>
+        {stars}
+        {' '}
+Stars
+      </h2>
+    </div>
+  );
 }
 
+Stars.defaultProps = {
+  stars: 0,
+};
+
+Stars.propTypes = {
+  stars: PropTypes.number,
+};
+
 function Overall(props) {
-  return props.overall.split('\n').map((section, index) => {
-    return (
-      <p style={{ fontSize: "1.5rem", color: "white" }} key={index}>{section}</p>
-    );
-  });
+  return props.overall.split('\n').map((section, index) => (
+    // eslint-disable-next-line react/no-array-index-key
+    <p style={{ fontSize: '1.5rem', color: 'white' }} key={index}>{section}</p>
+  ));
 }
 
 const PostContainer = styled(Container)`
@@ -40,31 +51,49 @@ const PostTitle = styled.h4`
 `;
 
 
+export default function PostContent(props) {
+  const {
+    // eslint-disable-next-line camelcase
+    overall, like, not_like, rating, rating_desc,
+  } = props;
+  return (
+    <PostContainer className="post">
+      <Container className="overall">
+        <PostTitle>Overall Summary</PostTitle>
+        <Overall overall={overall} />
+      </Container>
+      <Container className="like">
+        <PostTitle>What I liked most about the book</PostTitle>
+        <PostText>{like}</PostText>
+      </Container>
+      <Container className="not-like">
+        <PostTitle>What I liked least about the book</PostTitle>
 
-export default class PostContent extends Component {
-  render() {
-
-
-    return (
-      <PostContainer className="post">
-        <Container className="overall">
-          <PostTitle>Overall Summary</PostTitle>
-          <Overall overall={this.props.overall} />
-        </Container>
-        <Container className="like">
-          <PostTitle>What I liked most about the book</PostTitle>
-          <PostText>{this.props.like}</PostText>
-        </Container>
-        <Container className="not-like">
-          <PostTitle>What I liked least about the book</PostTitle>
-          <PostText>{this.props.not_like}</PostText>
-        </Container>
-        <Container className="rating">
-          <PostTitle>Rating</PostTitle>
-          <Stars stars={this.props.rating} />
-          <PostText>{this.props.rating_desc}</PostText>
-        </Container>
-      </PostContainer>
-    )
-  }
+        {/* eslint-disable-next-line camelcase */}
+        <PostText>{not_like}</PostText>
+      </Container>
+      <Container className="rating">
+        <PostTitle>Rating</PostTitle>
+        <Stars stars={rating} />
+        {/* eslint-disable-next-line camelcase */}
+        <PostText>{rating_desc}</PostText>
+      </Container>
+    </PostContainer>
+  );
 }
+
+PostContent.defaultProps = {
+  overall: '',
+  like: '',
+  not_like: '',
+  rating: 0,
+  rating_desc: '',
+};
+
+PostContent.propTypes = {
+  overall: PropTypes.string,
+  like: PropTypes.string,
+  not_like: PropTypes.string,
+  rating: PropTypes.number,
+  rating_desc: PropTypes.string,
+};

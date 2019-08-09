@@ -1,18 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react';
+import styled from 'styled-components';
 import Header from '../components/common/Header';
 import Footer from '../components/common/Footer';
-import 'bootstrap/dist/css/bootstrap.min.css'
-import styled from 'styled-components';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const Container = styled.div`
     min-height: 100%;
     position: relative;
     
 `;
 
-export default ({ children }) => (
+
+// eslint-disable-next-line react/prop-types
+export default function Page({ children }) {
+  return (
     <Container>
-        <Header />
-        {children}
-        <Footer />
+      <Header />
+      {children}
+      <Footer />
     </Container>
-);
+  );
+}

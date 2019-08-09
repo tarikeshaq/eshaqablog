@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styled from 'styled-components';
 import AnimatedContainer, { DelayedComponent } from './AnimatedContainer';
 import ProgrammingLanguages from './ProgrammingLanguages';
@@ -11,22 +11,22 @@ const CoderContainer = styled.div`
 `;
 
 export default class Coder extends AnimatedContainer {
-    constructor(props) {
-        super(props);
-        this.maxCount = 2;
-    }
+  constructor(props) {
+    super(props);
+    this.maxCount = 2;
+  }
 
-    render() {
-        return (
-            <CoderContainer>
-                <h3><strong>Coder</strong></h3>
-                <DelayedComponent count={this.state.count} order={1}>
-                    <ProgrammingLanguages />
-                </DelayedComponent>
-                <DelayedComponent count={this.state.count} order={2}>
-                    <Technologies />
-                </DelayedComponent>
-            </CoderContainer>
-        )
-    }
+  render() {
+    return (
+      <CoderContainer>
+        <h3><strong>Coder</strong></h3>
+        <DelayedComponent count={this.state.count} order={1}>
+          <ProgrammingLanguages />
+        </DelayedComponent>
+        <DelayedComponent count={this.state.count} order={2}>
+          <Technologies />
+        </DelayedComponent>
+      </CoderContainer>
+    );
+  }
 }

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { slideInUp, fadeIn, merge } from 'react-animations';
 
@@ -16,10 +16,6 @@ const Image = styled.img`
     animation: 2s ${SlideAnimation};
 `;
 
-export default class PersonalImage extends Component {
-    render() {
-        return (
-            <Image src="/static/images/Tarik_Eshaq_Image.jpg" alt="" />
-        )
-    }
-}
+export default () => (
+  <Image src="/static/images/Tarik_Eshaq_Image.jpg" alt="" />
+);
