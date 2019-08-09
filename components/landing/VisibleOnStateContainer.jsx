@@ -1,8 +1,7 @@
 export default function VisiableOnStateContainer(props) {
-
-    if (props.state) {
-        return { ...props.children };
-    } else {
-        return null;
-    }
+  const { state, children } = props;
+  if (state) {
+    return { ...children };
+  }
+  return null;
 }

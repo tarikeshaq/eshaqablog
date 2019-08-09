@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import Router from 'next/router';
 import styled from 'styled-components';
@@ -18,15 +19,25 @@ export default class ThumbnailContainer extends Component {
     };
   }
 
-  onClick = () => {
-    Router.push('/posts?postId=' + this.state.id);
+  onClick() {
+    const { id } = this.state;
+    Router.push(`/posts?postId=${id}`);
   }
 
   render() {
+    const { children } = this.props;
     return (
-      <BlogCard onClick={this.onClick}>
-        {this.props.children}
+      <BlogCard onClick={() => { this.onClick(); }}>
+        {children}
       </BlogCard>
-    )
+    );
   }
 }
+
+ThumbnailContainer.defaultProps = {
+  children: React.createElement('div'),
+};
+
+ThumbnailContainer.propTypes = {
+  children: PropTypes.node,
+};

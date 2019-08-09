@@ -1,12 +1,15 @@
-import Head from 'next/head'
+import React from 'react';
+import Head from 'next/head';
+
 export default () => (
-    <div>
-        <Head>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta charSet="utf-8" />
-            <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
-        </Head>
-        <style jsx global>{`
+  <div>
+    <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta charSet="utf-8" />
+      <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet" />
+    </Head>
+    <style jsx global>
+      {`
       body, html, #__next {
         height: 100%;
         margin: 0;
@@ -17,6 +20,7 @@ export default () => (
     font-family: 'Raleway', sans-serif;
  
     }
-    `}</style>
-    </div>
-)
+    `}
+    </style>
+  </div>
+);

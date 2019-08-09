@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Router from 'next/router';
 import Container from 'react-bootstrap/Container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faCopyright } from '@fortawesome/free-regular-svg-icons'
-import { faLinkedin, faGithub, faGoodreads } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope, faCopyright } from '@fortawesome/free-regular-svg-icons';
+import { faLinkedin, faGithub, faGoodreads } from '@fortawesome/free-brands-svg-icons';
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
@@ -20,56 +19,40 @@ const StyledCol = styled(Col)`
     text-align: center;
 `;
 
-const StyledNavigate = styled.p`
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: max-content;
-    text-align: center;
-    cursor: pointer;
-`;
 
 const ClickableIcon = styled(FontAwesomeIcon)`
     cursor: pointer;
 `;
 
-export default class Footer extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    sendMail() {
-        const link = "mailto:tarikeshaq@gmail.com"
-            + "?subject=" + escape("PLEASE INPUT SUBJECT")
-            + "&body=" + escape("ENTER MESSAGE BODY HERE")
-        window.location.href = link;
-    }
-
-    render() {
-        return (
-            <StyledFooter>
-                <Container>
-                    <Row>
-                        <StyledCol>
-                            <ClickableIcon onClick={() => { window.open("https://www.linkedin.com/in/tarikeshaq/", '__blank') }} icon={faLinkedin} />
-                        </StyledCol>
-                        <StyledCol>
-                            <ClickableIcon onClick={() => { window.open("https://github.com/tarikeshaq", '__blank') }} icon={faGithub} />
-                        </StyledCol>
-                        <StyledCol>
-                            <ClickableIcon onClick={() => { window.open("https://www.goodreads.com/user/show/77719569-tarik", '__blank') }} icon={faGoodreads} />
-                        </StyledCol>
-                        <StyledCol>
-                            <ClickableIcon onClick={() => { this.sendMail(); }} icon={faEnvelope} />
-                        </StyledCol>
-                        <StyledCol>
-                            <Container>
-                                <ClickableIcon icon={faCopyright} />
-                            </Container>
-                        </StyledCol>
-                    </Row>
-                </Container>
-            </StyledFooter>
-        );
-    }
+function sendMail() {
+  const link = `${'mailto:tarikeshaq@gmail.com'
+          + '?subject='}${escape('PLEASE INPUT SUBJECT')
+  }&body=${escape('ENTER MESSAGE BODY HERE')}`;
+  window.location.href = link;
 }
+
+export default () => (
+  <StyledFooter>
+    <Container>
+      <Row>
+        <StyledCol>
+          <ClickableIcon onClick={() => { window.open('https://www.linkedin.com/in/tarikeshaq/', '__blank'); }} icon={faLinkedin} />
+        </StyledCol>
+        <StyledCol>
+          <ClickableIcon onClick={() => { window.open('https://github.com/tarikeshaq', '__blank'); }} icon={faGithub} />
+        </StyledCol>
+        <StyledCol>
+          <ClickableIcon onClick={() => { window.open('https://www.goodreads.com/user/show/77719569-tarik', '__blank'); }} icon={faGoodreads} />
+        </StyledCol>
+        <StyledCol>
+          <ClickableIcon onClick={() => { sendMail(); }} icon={faEnvelope} />
+        </StyledCol>
+        <StyledCol>
+          <Container>
+            <ClickableIcon icon={faCopyright} />
+          </Container>
+        </StyledCol>
+      </Row>
+    </Container>
+  </StyledFooter>
+);
