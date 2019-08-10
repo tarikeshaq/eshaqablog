@@ -7,7 +7,7 @@ import Meta from '../components/meta';
 
 export default class Blogs extends React.Component {
   static async getInitialProps() {
-    const response = await fetch('https://morning-stream-77102.herokuapp.com/blogs');
+    const response = await fetch(`${process.env.BLOGS}`);
     const posts = await response.json();
     return {
       posts: [...posts],
