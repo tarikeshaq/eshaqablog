@@ -4,3 +4,4 @@
 
 #Next.js Build
 /.next
+.env
