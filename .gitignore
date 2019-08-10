@@ -4,4 +4,5 @@
 
 #Next.js Build
 /.next
+*.log
 .env
