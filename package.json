@@ -4,9 +4,10 @@
   "description": "A personal website built with Next.js, React and lots of love",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "dev": "next",
-    "build": "next build"
+    "build": "next build",
+    "heroku-postbuild": "npm run build"
   },
   "author": "Tarik Eshaq",
   "license": "MIT",
