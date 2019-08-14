@@ -17,5 +17,5 @@ const Image = styled.img`
 `;
 
 export default () => (
-  <Image src="/static/images/Tarik_Eshaq_Image-min.JPG" alt="" />
+  <Image src="/static/images/Tarik_Eshaq_Image.JPG" alt="" />
 );
