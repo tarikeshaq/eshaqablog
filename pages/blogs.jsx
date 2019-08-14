@@ -10,7 +10,7 @@ export default class Blogs extends React.Component {
     const response = await fetch(`${process.env.BLOGS}`);
     const posts = await response.json();
     return {
-      posts: [...posts],
+      posts: posts || [],
     };
   }
 

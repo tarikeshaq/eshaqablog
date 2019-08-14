@@ -14,6 +14,10 @@ const BlogCol = styled(Col)`
   padding-bottom: 3%
 `;
 
+const StyledSpan = styled.span`
+  color: white;
+  text-align: center
+`;
 
 export default class BlogsContainer extends Component {
   constructor(props) {
@@ -57,9 +61,29 @@ export default class BlogsContainer extends Component {
         </BlogRow>,
       );
     }
+    if (rowedThumbnails.length > 0) {
+      return (
+        <BodyContainer>
+          {rowedThumbnails}
+        </BodyContainer>
+      );
+    }
+
     return (
       <BodyContainer>
-        {rowedThumbnails}
+        <StyledSpan>
+Looks like I haven&apos;t written anything yet
+        </StyledSpan>
+        <span role="img" aria-label="sad">
+        😳
+        </span>
+        <StyledSpan>
+         Come back soon!
+           And enjoy some Tic-Tac-Toe at the home page
+        </StyledSpan>
+        <span role="img" aria-label="happy">
+        😁
+        </span>
       </BodyContainer>
     );
   }
