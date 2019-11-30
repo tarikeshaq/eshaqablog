@@ -18,12 +18,12 @@ export default () => (
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="responsive-navbar-nav">
       <Nav className="mr-auto">
-        <Link href="/blogs">
+        {/* <Link href="/blogs">
           <a href="#" className="nav-link">Blogs</a>
         </Link>
         <Link href="/about">
           <a href="#" className="nav-link">About</a>
-        </Link>
+        </Link> */}
       </Nav>
       <Nav>
         <a href="/static/resume/Tarik_Eshaq_Resume.pdf" className="nav-link" download="Tarik_Eshaq_Resume">Resume</a>
